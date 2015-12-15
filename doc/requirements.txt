@@ -1,3 +1,4 @@
+sphinx_bootstrap_theme
 ipykernel
 numpy
 matplotlib

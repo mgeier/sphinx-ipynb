@@ -3,6 +3,8 @@ import os
 # You can use sphinx-quickstart to create your own conf.py file!
 # After that, you have to edit a few things.  See below.
 
+import sphinx_bootstrap_theme
+
 # Select nbsphinx and, if needed, other Sphinx extensions:
 extensions = [
     'nbsphinx',
@@ -137,6 +139,23 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+html_theme_options = {
+    'navigation_with_keys': True,
+    'navbar_title': 'nbsphinx',
+    'navbar_site_name': 'Pages',
+    #'navbar_pagenav': False,
+    #'navbar_sidebarrel': False,
+    'navbar_pagenav_name': 'This Page',
+    #'globaltoc_depth': -1,
+    'navbar_fixed_top': True,
+    'source_link_position': 'none',
+    #'bootswatch_theme': 'cosmo',
+    #'bootswatch_theme': 'lumen',
+    #'bootswatch_theme': 'sandstone',
+    'bootswatch_theme': 'spacelab',
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
