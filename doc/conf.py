@@ -137,6 +137,29 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'alabaster'
+html_theme_options = {
+    #'nosidebar': True,
+    'navigation_with_keys': True,
+    'description': 'Jupyter Notebooks + Sphinx',
+    'github_banner': True,
+    'github_button': True,
+    'github_repo': 'nbsphinx',
+    'github_type': 'star',
+    'github_user': 'spatialaudio',
+    'page_width': '1095px',
+    'show_relbars': True,
+}
+html_sidebars = {
+    '**': [
+        'about.html',
+        #'globaltoc.html',
+        #'localtoc.html',
+        'navigation.html',
+        'searchbox.html',
+        #'sourcelink.html',
+    ]
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
