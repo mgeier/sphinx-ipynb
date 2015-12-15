@@ -3,6 +3,8 @@ import os
 # You can use sphinx-quickstart to create your own conf.py file!
 # After that, you have to edit a few things.  See below.
 
+import cloud_sptheme
+
 # Select nbsphinx and, if needed, other Sphinx extensions:
 extensions = [
     'nbsphinx',
@@ -137,6 +139,20 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'cloud'  # or 'redcloud', 'greencloud'
+html_theme_options = {
+    #'nosidebar': True,
+    'navigation_with_keys': True,
+}
+html_sidebars = {
+    '**': [
+        'globaltoc.html',
+        #'localtoc.html',
+        #'relations.html',
+        'searchbox.html',
+        'sourcelink.html',
+    ]
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 

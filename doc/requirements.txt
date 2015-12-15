@@ -1,3 +1,4 @@
+cloud_sptheme
 ipykernel
 numpy
 matplotlib
