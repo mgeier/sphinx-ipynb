@@ -1,3 +1,4 @@
+sphinx-py3doc-enhanced-theme
 ipykernel
 numpy
 matplotlib
