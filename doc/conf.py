@@ -137,6 +137,14 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'traditional'
+html_theme_options = {
+    #'nosidebar': True,
+    #'sidebarwidth': 300,
+    #'body_min_width': 0,
+    #'body_max_width': 800,
+    'navigation_with_keys': True,
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
