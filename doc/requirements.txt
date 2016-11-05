@@ -1,3 +1,4 @@
+git+https://github.com/guzzle/guzzle_sphinx_theme.git@master
 ipykernel
 numpy
 matplotlib

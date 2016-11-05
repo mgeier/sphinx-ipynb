@@ -3,6 +3,8 @@ import os
 # You can use sphinx-quickstart to create your own conf.py file!
 # After that, you have to edit a few things.  See below.
 
+import guzzle_sphinx_theme
+
 # Select nbsphinx and, if needed, other Sphinx extensions:
 extensions = [
     'nbsphinx',
@@ -137,6 +139,20 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme_path = guzzle_sphinx_theme.html_theme_path()
+html_theme = 'guzzle_sphinx_theme'
+
+html_theme_options = {
+    'navigation_with_keys': True,
+
+    'project_nav_name': project,
+    'base_url': 'https://nbsphinx.readthedocs.io/en/guzzle-theme/',
+    'globaltoc_depth': 3,
+    #'globaltoc_collapse': False,
+}
+html_sidebars = {
+    '**': ['logo-text.html', 'globaltoc.html', 'searchbox.html']
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
