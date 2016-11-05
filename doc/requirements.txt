@@ -1,3 +1,4 @@
+sphinx-better-theme
 ipykernel
 numpy
 matplotlib

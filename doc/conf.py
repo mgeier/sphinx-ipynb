@@ -138,6 +138,33 @@ except Exception:
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
 
+html_short_title = 'Home'
+
+from better import better_theme_path
+
+html_theme_path = [better_theme_path]
+html_theme = 'better'
+html_theme_options = {
+    #'nosidebar': True,
+    'navigation_with_keys': True,
+    #'rightsidebar': True,
+    #'inlinecss': '',
+    #'cssfiles': ['_static/my_style.css'],
+    #'showheader': False,
+    #'showrelbartop': False,
+    #'showrelbarbottom': False,
+    #'linktotheme': False,
+    #'sidebarwidth': '15rem',
+    #'textcolor': '#000000',
+    #'headtextcolor': '',
+    #'footertextcolor': '',
+    #'ga_ua': '',
+    #'ga_domain': '',
+}
+html_sidebars = {
+    '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
+}
+
 # -- Options for LaTeX output ---------------------------------------------
 
 # See https://www.sphinx-doc.org/en/master/latex.html
