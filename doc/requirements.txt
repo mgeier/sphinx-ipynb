@@ -1,3 +1,4 @@
+git+https://github.com/vsajip/sphinx_sizzle_theme.git
 ipykernel
 numpy
 matplotlib

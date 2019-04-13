@@ -137,6 +137,15 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'sizzle'
+html_theme_options = {
+    'globaltoc_collapse': True,
+    'globaltoc_depth': 3,
+    'project_logo_name': project,
+    'show_index': False,
+    'show_filter': False,
+}
+html_show_sourcelink = False
 
 # -- Options for LaTeX output ---------------------------------------------
 
