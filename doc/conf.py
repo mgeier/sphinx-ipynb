@@ -138,6 +138,23 @@ except Exception:
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
 
+import maisie_sphinx_theme
+html_theme_path = maisie_sphinx_theme.html_theme_path()
+html_theme = 'maisie_sphinx_theme'
+html_theme_options = {
+    'navigation_with_keys': True,
+    'project_nav_name': project,
+    'globaltoc_depth': 3,
+    #'globaltoc_collapse': False,
+}
+html_sidebars = {
+    '**': [
+        'logo-text.html',
+        'globaltoc.html',
+        'searchbox.html',
+    ],
+}
+
 # -- Options for LaTeX output ---------------------------------------------
 
 # See https://www.sphinx-doc.org/en/master/latex.html

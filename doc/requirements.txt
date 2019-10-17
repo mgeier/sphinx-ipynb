@@ -1,3 +1,4 @@
+maisie-sphinx-theme
 ipykernel
 numpy
 matplotlib
