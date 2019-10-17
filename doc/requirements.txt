@@ -1,3 +1,4 @@
+sphinx-pangeo-theme
 ipykernel
 numpy
 matplotlib
