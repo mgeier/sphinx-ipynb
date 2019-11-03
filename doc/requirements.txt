@@ -1,3 +1,4 @@
+pydata-sphinx-theme
 ipykernel
 numpy
 matplotlib

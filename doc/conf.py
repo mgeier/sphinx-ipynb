@@ -137,6 +137,18 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'pydata_sphinx_theme'
+html_theme_options = {
+    #'show_prev_next': False,
+    'github_url': 'https://github.com/spatialaudio/nbsphinx',
+    'use_edit_page_button': True,
+}
+html_context = {
+    'github_user': 'spatialaudio',
+    'github_repo': 'nbsphinx',
+    'github_version': 'master',
+    'doc_path': 'doc',
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
