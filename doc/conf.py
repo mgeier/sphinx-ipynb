@@ -138,6 +138,27 @@ except Exception:
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
 
+html_theme = 'sphinx_material'
+html_theme_options = {
+    'navigation_with_keys': True,
+    'nav_title': 'nbsphinx',
+    #'color_primary': 'blue',
+    #'color_accent': 'light-blue',
+    'repo_url': 'https://github.com/spatialaudio/nbsphinx',
+    'repo_name': 'nbsphinx on Github',
+    'repo_type': 'github',
+    'globaltoc_depth': 3,
+    'globaltoc_collapse': True,
+    'master_doc': True,
+}
+html_show_sourcelink = True
+html_sidebars = {
+    '**': [
+        'globaltoc.html',
+        #'localtoc.html',
+    ]
+}
+
 # -- Options for LaTeX output ---------------------------------------------
 
 # See https://www.sphinx-doc.org/en/master/latex.html
