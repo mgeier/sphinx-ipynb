@@ -137,6 +137,15 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'bootstrap-astropy'
+html_theme_options = {
+    #'nosidebar': True,
+    'navigation_with_keys': True,
+
+    'logotext1': 'astro',
+    'logotext2': 'py',
+    'logotext3': ':nbsphinx',
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 

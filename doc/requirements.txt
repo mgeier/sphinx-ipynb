@@ -1,3 +1,4 @@
+astropy-sphinx-theme
 ipykernel
 numpy
 matplotlib
