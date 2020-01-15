@@ -1,3 +1,4 @@
+insipid-sphinx-theme
 ipykernel
 numpy
 matplotlib
