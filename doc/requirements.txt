@@ -1,3 +1,4 @@
+dask-sphinx-theme
 ipykernel
 numpy
 matplotlib
