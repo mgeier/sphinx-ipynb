@@ -137,6 +137,10 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'furo'
+html_theme_options = {
+    'navigation_with_keys': True,
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 

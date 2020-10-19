@@ -1,3 +1,4 @@
+furo
 ipykernel
 numpy
 matplotlib
