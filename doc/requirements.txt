@@ -1,3 +1,4 @@
+sphinx-holoviz-theme
 ipykernel
 numpy
 matplotlib

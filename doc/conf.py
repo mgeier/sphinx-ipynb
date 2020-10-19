@@ -137,6 +137,7 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'sphinx_holoviz_theme'
 
 # -- Options for LaTeX output ---------------------------------------------
 
