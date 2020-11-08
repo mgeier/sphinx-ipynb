@@ -1,3 +1,4 @@
+sphinx-uedoc-theme
 ipykernel
 numpy
 matplotlib

@@ -137,6 +137,11 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'uedoc_theme'
+extensions += ['uedoc_theme']
+html_theme_options = {
+    # https://github.com/Raider-Arts/sphinx-uedoc-theme#customizable-options
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
