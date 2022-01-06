@@ -137,6 +137,17 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'python_docs_theme'
+html_theme_options = {
+    'navigation_with_keys': True,
+    'issues_url': 'https://github.com/spatialaudio/nbsphinx/issues',
+    'root_name': '',
+    'root_url': '',
+    'root_icon': '',
+    #'root_include_title': False,
+}
+html_js_files = ['sidebar.js']
+templates_path = ['_templates']
 
 # -- Options for LaTeX output ---------------------------------------------
 
