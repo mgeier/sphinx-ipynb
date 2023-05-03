@@ -1,3 +1,4 @@
+sphinx-immaterial
 ipykernel
 numpy
 matplotlib

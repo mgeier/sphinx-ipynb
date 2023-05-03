@@ -137,6 +137,28 @@ except Exception:
 
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
+html_theme = 'sphinx_immaterial'
+extensions.append('sphinx_immaterial')
+html_theme_options = {
+    'palette': [
+        {
+            'media': '(prefers-color-scheme: light)',
+            'scheme': 'default',
+            'toggle': {
+                'icon': 'material/toggle-switch-off-outline',
+                'name': 'Switch to dark mode',
+            }
+        },
+        {
+            'media': '(prefers-color-scheme: dark)',
+            'scheme': 'slate',
+            'toggle': {
+                'icon': 'material/toggle-switch',
+                'name': 'Switch to light mode',
+            }
+        },
+    ]
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
