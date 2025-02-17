@@ -11,5 +11,6 @@ sphinxcontrib-bibtex>=2.1
 sphinxcontrib-svg2pdfconverter
 ipywidgets
 jupytext
+sphinx == 8.2.0rc1
 sphinx-last-updated-by-git
 sphinx-codeautolink

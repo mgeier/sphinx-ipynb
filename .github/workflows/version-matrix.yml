@@ -18,6 +18,10 @@ jobs:
           # default Python, latest Sphinx
           - env: {}
 
+          # latest Sphinx release candidate
+          - env:
+              SPHINX_PACKAGE: "sphinx==8.2.0rc1"
+
           # a few older Sphinx releases using default Python version
           - env:
               SPHINX_PACKAGE: "sphinx==5.0.0 sphinxcontrib-bibtex==2.5.0"

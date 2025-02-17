@@ -27,7 +27,9 @@ import sphinx.directives
 import sphinx.directives.other
 import sphinx.environment
 import sphinx.errors
+import sphinx.transforms
 import sphinx.transforms.post_transforms.images
+import sphinx.util.console
 from sphinx.util.matching import patmatch
 try:
     from sphinx.util.display import status_iterator
@@ -1458,7 +1460,7 @@ class CopyLinkedFiles(docutils.transforms.Transform):
             env.nbsphinx_files.setdefault(env.docname, []).append(file)
 
 
-class ForceEquations(docutils.transforms.Transform):
+class ForceEquations(sphinx.transforms.SphinxTransform):
     """Unconditionally enable equations on notebooks.
 
     Except if ``nbsphinx_assume_equations`` is set to ``False``.
@@ -1468,9 +1470,15 @@ class ForceEquations(docutils.transforms.Transform):
     default_priority = 900  # after checking for equations in MathDomain
 
     def apply(self):
-        env = self.document.settings.env
-        if env.config.nbsphinx_assume_equations:
-            env.get_domain('math').data['has_equations'][env.docname] = True
+        if sphinx.version_info[:2] >= (8, 2):
+            # Sphinx 8.2 detects equations via the writer/translator,
+            # so ForceEquations isn't needed.
+            return
+        if not self.config.nbsphinx_assume_equations:
+            return
+
+        maths_data = self.env.get_domain('math').data
+        maths_data.setdefault('has_equations', {})[self.env.docname] = True
 
 
 class GetSizeFromImages(

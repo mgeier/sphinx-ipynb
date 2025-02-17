@@ -37,6 +37,8 @@ __ https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
     custom-css
     a-normal-rst-file
     a-markdown-file
+    a-markdown-file-inline
+    a-markdown-file-block
     links
     contributing
     references
