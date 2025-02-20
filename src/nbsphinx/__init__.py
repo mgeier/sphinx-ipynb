@@ -28,6 +28,7 @@ import sphinx.directives.other
 import sphinx.environment
 import sphinx.errors
 import sphinx.transforms.post_transforms.images
+import sphinx.util.console
 from sphinx.util.matching import patmatch
 try:
     from sphinx.util.display import status_iterator
