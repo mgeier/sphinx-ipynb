@@ -19,10 +19,14 @@ jobs:
           - env: {}
 
           # a few older Sphinx releases using default Python version
+          # sphinx 5.0 and 5.3 requires the imghdr module removed
+          # in python 3.13 so test with 3.12
           - env:
               SPHINX_PACKAGE: "sphinx==5.0.0 sphinxcontrib-bibtex==2.5.0"
+              PYTHON_VERSION: "3.12"
           - env:
               SPHINX_PACKAGE: "sphinx==5.3.0 sphinxcontrib-bibtex==2.5.0"
+              PYTHON_VERSION: "3.12"
           - env:
               SPHINX_PACKAGE: "sphinx==6.2.1 sphinxcontrib-bibtex==2.5.0"
           - env:
