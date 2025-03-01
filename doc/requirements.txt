@@ -8,7 +8,7 @@ xarray
 # https://github.com/mcmtroffaes/sphinxcontrib-bibtex/issues/345:
 setuptools
 sphinxcontrib-bibtex>=2.1
-sphinxcontrib-svg2pdfconverter
+sphinxcontrib-svg2pdfconverter @ git+https://github.com/jenshnielsen/sphinxcontrib-svg2pdfconverter@sphinx_3_8_support
 ipywidgets
 jupytext
 sphinx-last-updated-by-git

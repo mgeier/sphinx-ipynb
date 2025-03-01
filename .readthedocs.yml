@@ -18,3 +18,5 @@ python:
       path: .
     - requirements: doc/fallback_theme.txt
 formats: all
+sphinx:
+  configuration: doc/conf.py

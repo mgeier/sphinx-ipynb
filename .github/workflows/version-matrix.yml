@@ -19,24 +19,30 @@ jobs:
           - env: {}
 
           # a few older Sphinx releases using default Python version
+          # sphinx 5.0 and 5.3 requires the imghdr module removed
+          # in python 3.13 so test with 3.12
           - env:
               SPHINX_PACKAGE: "sphinx==5.0.0 sphinxcontrib-bibtex==2.5.0"
+              PYTHON_VERSION: "3.12"
           - env:
               SPHINX_PACKAGE: "sphinx==5.3.0 sphinxcontrib-bibtex==2.5.0"
+              PYTHON_VERSION: "3.12"
           - env:
               SPHINX_PACKAGE: "sphinx==6.2.1 sphinxcontrib-bibtex==2.5.0"
           - env:
               SPHINX_PACKAGE: "sphinx==7.0.1"
           - env:
               SPHINX_PACKAGE: "sphinx==7.1.2"
+          - env:
+              SPHINX_PACKAGE: "sphinx==8.1.3"
 
           # a few Python versions using latest Sphinx release
           - env:
-              PYTHON_VERSION: "3.8"
+              PYTHON_VERSION: "3.11"
           - env:
-              PYTHON_VERSION: "3.10"
+              PYTHON_VERSION: "3.12"
           - env:
-              PYTHON_VERSION: "3.13-dev"
+              PYTHON_VERSION: "3.13"
               PYTHONWARNINGS: default
 
     env: ${{ matrix.env || fromJSON('{}') }}
@@ -73,7 +79,8 @@ jobs:
       env:
         # DeprecationWarning: Unimplemented abstract methods {'locate_file'}
         # https://github.com/pypa/pip/issues/11684
-        PYTHONWARNINGS: error,default::DeprecationWarning
+        # silence warning from building sphinxcontrib-svg2pdfconverter
+        PYTHONWARNINGS: default
       run: |
         $PIP install -r doc/requirements.txt --upgrade-strategy only-if-needed
     - name: Run Sphinx (HTML)
@@ -81,7 +88,10 @@ jobs:
         # There is a weird warning from jupyter_core (https://github.com/jupyter/jupyter_core/issues/398)
         # RemovedInSphinx10Warning: 'sphinx.util.import_object' is deprecated
         # https://github.com/sphinx-doc/sphinx/issues/13083
-        PYTHONWARNINGS: error,default::DeprecationWarning,default:'sphinx.util.import_object'
+        # warning from sphinx-codeautolink
+        # The tuple interface for _InventoryItem objects is deprecated
+        # https://github.com/felix-hilden/sphinx-codeautolink/issues/173
+        PYTHONWARNINGS: default::DeprecationWarning,default:'sphinx.util.import_object',default:'the\\ tuple\\ interface'
       run: |
         $SPHINX doc _build -b html
     - name: Run Sphinx (LaTeX, but without running LaTeX)
