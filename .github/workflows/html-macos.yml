@@ -41,6 +41,9 @@ jobs:
         # There is a weird warning from jupyter_core (https://github.com/jupyter/jupyter_core/issues/398)
         # RemovedInSphinx10Warning: 'sphinx.util.import_object' is deprecated
         # https://github.com/sphinx-doc/sphinx/issues/13083
-        PYTHONWARNINGS: error,default::DeprecationWarning,default:'sphinx.util.import_object'
+        # warning from sphinx-codeautolink
+        # The tuple interface for _InventoryItem objects is deprecated
+        # https://github.com/felix-hilden/sphinx-codeautolink/issues/173
+        PYTHONWARNINGS: default::DeprecationWarning,default:'sphinx.util.import_object',default:'the\\ tuple\\ interface'
       run: |
         $SPHINX doc/ _build/html/
