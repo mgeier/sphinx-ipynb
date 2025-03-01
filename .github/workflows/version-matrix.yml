@@ -33,14 +33,16 @@ jobs:
               SPHINX_PACKAGE: "sphinx==7.0.1"
           - env:
               SPHINX_PACKAGE: "sphinx==7.1.2"
+          - env:
+              SPHINX_PACKAGE: "sphinx==8.1.3"
 
           # a few Python versions using latest Sphinx release
           - env:
-              PYTHON_VERSION: "3.8"
+              PYTHON_VERSION: "3.11"
           - env:
-              PYTHON_VERSION: "3.10"
+              PYTHON_VERSION: "3.12"
           - env:
-              PYTHON_VERSION: "3.13-dev"
+              PYTHON_VERSION: "3.13"
               PYTHONWARNINGS: default
 
     env: ${{ matrix.env || fromJSON('{}') }}
