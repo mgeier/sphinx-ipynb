@@ -34,7 +34,8 @@ jobs:
       env:
         # DeprecationWarning: Unimplemented abstract methods {'locate_file'}
         # https://github.com/pypa/pip/issues/11684
-        PYTHONWARNINGS: error,default::DeprecationWarning
+        # silence warning from building sphinxcontrib-svg2pdfconverter
+        PYTHONWARNINGS: default
       run: |
         $PIP install -r doc/requirements.txt
     - name: Check links
