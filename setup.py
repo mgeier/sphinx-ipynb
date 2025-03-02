@@ -29,7 +29,8 @@ setup(
         'nbconvert>=5.3,!=5.4',
         'traitlets>=5',
         'nbformat',
-        'sphinx>=1.8',
+        # https://github.com/spatialaudio/nbsphinx/issues/825
+        'sphinx >= 1.8, < 8.2',
     ],
     author='Matthias Geier',
     author_email='Matthias.Geier@gmail.com',
